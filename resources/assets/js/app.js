@@ -22,7 +22,10 @@ Vue.use(Vuetify)
 
 Vue.component('Apphome', require('./components/AppHome.vue'));
 
+import router from './Router/router.js'
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });
 
