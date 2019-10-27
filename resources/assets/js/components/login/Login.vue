@@ -27,23 +27,19 @@
 <script>
 export default {
 
- data(){
+    data(){
         return {
             form :{
                 email:null,
                 password:null
             }
         }
-},
-methods: {
-    login(){
-
-        axios.post('/api/auth/login', this.form)
-        .then(res => console.log(res.data))
-        .catch(error => console.log(error.response.data))
-
+    },
+    methods:{
+        login(){
+            User.login(this.form)
+        }
     }
-},
 
 }
 </script>
